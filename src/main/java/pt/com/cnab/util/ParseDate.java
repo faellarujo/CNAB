@@ -8,6 +8,13 @@ public class ParseDate {
 
     private LocalDate date;
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
     public ParseDate(String date) {
         final LocalDate stringLocalDate = toStringLocalDate(formataData(date));
