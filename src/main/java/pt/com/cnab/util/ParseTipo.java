@@ -4,6 +4,14 @@ public class ParseTipo {
 
     Long tipo;
 
+    public Long getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Long tipo) {
+        this.tipo = tipo;
+    }
+
     public ParseTipo(String tipo) {
         final Long l = extraindoTipo(tipo);
         this.tipo = l;

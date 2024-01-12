@@ -13,7 +13,10 @@ class ReadDocumentTest {
         ReadDocument readDocument = new ReadDocument();
         String caminhoArquivo = "CNAB.txt";
         String conteudo = readDocument.lerArquivo(caminhoArquivo);
+        System.out.println(conteudo.toString());
         assertNotNull(conteudo);
+
+
 
     }
 }
