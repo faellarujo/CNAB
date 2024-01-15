@@ -3,6 +3,7 @@ package pt.com.cnab.util;
 public class ParseTipo {
 
     Long tipo;
+    private ExtraiPartes extraiPartes;
 
     public Long getTipo() {
         return tipo;

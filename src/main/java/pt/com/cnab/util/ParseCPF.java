@@ -12,14 +12,8 @@ public class ParseCPF {
     }
 
     public ParseCPF(String str) {
-        final String s = formatarCPF(extraindoTipo(str));
+        final String s = formatarCPF(str);
         this.str = s;
-    }
-
-    public String extraindoTipo(String str){
-        String parte = str.substring(20, 30); // Extrai cpf
-        System.out.println(parte);
-        return parte;
     }
 
     public String formatarCPF(String cpfSemFormato) {
