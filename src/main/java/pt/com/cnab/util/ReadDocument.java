@@ -11,12 +11,24 @@ import java.util.List;
 
 public class ReadDocument {
 
-        static String caminhoArquivo = "CNAB.txt";
+    String caminhoArquivo;
 
-        public void lerArquivo(String caminhoArquivo) throws IOException {
+    public String getCaminhoArquivo() {
+        return caminhoArquivo;
+    }
+
+    public void setCaminhoArquivo(String caminhoArquivo) {
+        this.caminhoArquivo = caminhoArquivo;
+    }
+
+    public ReadDocument(String nomeArquivo) throws IOException {
+        this.caminhoArquivo = nomeArquivo;
+    }
+
+    public List<CnabDTO> lerArquivo(String caminhoArquivo) throws IOException {
             StringBuilder conteudo = new StringBuilder();
 
-            try (BufferedReader bufferedReader = new BufferedReader(new FileReader(caminhoArquivo))) {
+            try (BufferedReader bufferedReader = new BufferedReader(new FileReader("C:/Users/faell/IdeaProjects/CNAB/CNAB.txt"))) {
                 String linha;
                 List<CnabDTO> dtoList  = new ArrayList<>();
                 while ((linha = bufferedReader.readLine()) != null) {
@@ -25,8 +37,9 @@ public class ReadDocument {
                     dtoList.add(cnabDTO);
                     conteudo.append(linha).append("\n");
                 }
+                return dtoList;
             }
-        }
+    }
 
     private CnabDTO parserFild(ExtraiPartes extraiPartes, String linha) {
         ParseTipo  parseTipo     = new ParseTipo(extraiPartes.extraindoTipo(linha));

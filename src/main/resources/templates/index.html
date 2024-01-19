@@ -1,0 +1,25 @@
+<!-- index -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Upload de Arquivo</title>
+</head>
+<body>
+<form action="/index"
+      method="post"
+      enctype="multipart/form-data">
+
+    Selecione o arquivo para fazer upload: <input type="file" name="file" /><br/>
+
+    <input type="submit" value="Fazer Upload" />
+    <button type="button" onclick="lerDados()">Ler Dados</button>
+</form>
+<script>
+    function lerDados() {
+        window.location.href = '/cnab'; // Substitua '/seu-endpoint' pelo endpoint desejado
+    }
+</script>
+
+</body>
+</html>
